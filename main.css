@@ -38,7 +38,8 @@ ul {
 
     list-style: none;
 
-    columns: 170px 4;
+    font-size: 130%;
+    columns: 300px 4;
 }
 
 /* This part of code is for the photo. It is complicated and I still confused 
@@ -64,6 +65,7 @@ with some of them sometimes, so I will explain each one individually. */
     padding: 0.2em;
     float: left;
     clear: left;
+    font-family: : serif;
     font-size: 120%;
 }
 
@@ -75,6 +77,6 @@ with some of them sometimes, so I will explain each one individually. */
 /* This is will make the text size to be 1.15em and change the space between each line 
 to be 1.7. */
 p {
-    font-size: 1.15em;
+    font-size: 130%;
     line-height: 1.7;
 }
