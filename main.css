@@ -4,15 +4,24 @@
 }
 
 #box {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
-h1 {
+h1, h2 {
     font-family: serif;
     border-bottom: 1px solid #a2a9b1;
     font-weight: normal;
     overflow: hidden;
+}
+
+h1 {
+    margin-bottom: .2em;
+}
+
+ol {
+    overflow: hidden;
+    line-height: 1.5;
 }
 
 #myself {
@@ -28,7 +37,7 @@ h1 {
     padding: 0.2em;
     float: left;
     clear: left;
-    font-size: 150%;
+    font-size: 120%;
 }
 
 #myself img {
@@ -36,6 +45,6 @@ h1 {
 }
 
 p {
-    font-size: 0.875em;
-    line-height: 1.5;
+    font-size: 1.15em;
+    line-height: 2.2;
 }
