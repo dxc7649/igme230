@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#box {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: serif;
+    border-bottom: 1px solid #a2a9b1;
+    font-weight: normal;
+    overflow: hidden;
+}
+
+#myself {
+    text-align: center;
+    width: 250px;
+
+    border: 1px solid #a2a9b1;
+    border-spacing: 3px;
+    background-color: #f8f9fa;
+    color: black;
+
+    margin: 0.5em 1em 0.5em 0;
+    padding: 0.2em;
+    float: left;
+    clear: left;
+    font-size: 150%;
+}
+
+#myself img {
+    max-width: 100%;
+}
+
+p {
+    font-size: 0.875em;
+    line-height: 1.5;
+}
