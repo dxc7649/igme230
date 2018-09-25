@@ -2,27 +2,34 @@
     box-sizing: border-box;
 }
 
+/* Set the width of element "header", "article" and 'aside" to 100% */
 header, article, aside {
     width: 100%;
 }
 
+/* Change the background color of element "header" to appropriate color and set the padding of hear to 5px on four sides */
 header {
     background-color: #e5e5e5;
     padding: 5px;
 }
 
+/* Change the text inside "h1", "h2" and "nav" all position in the center of the box */
 h1, h2, nav {
     text-align: center;
 }
 
+/* Make sure if the content inside the element "nav" is clipped, a scroll-bar will be added to see the remaining content */
 nav {
     overflow: auto;
 }
 
+/* Change the max-width of content inside "img" to be 100% */
 img {
     max-width: 100%;
 }
 
+/* First, change the background color of "h3", "nav a" to appropriate color. Then change padding for four sides to 9px, top-side margin to 7px. Also set the width of these ele
+elements to 100% */
 h3, nav a {
     background-color: #e5e5e5;
     padding: 8px;
@@ -31,12 +38,14 @@ h3, nav a {
     display: block;
 }
 
+/* Change the background color to appropriate color, then set the paddinf for four sides to 15px and the top-side margin to 7px*/
 aside {
     background-color: #e5e5e5;
     padding: 15px;
     margin-top: 7px;
 }
 
+/* All elements inside this will be set to corresponding values if the width of the screen is bigger or equal ot 620px */
 @media screen and (min-width: 620px) {
     aside, nav {
         float: left;
