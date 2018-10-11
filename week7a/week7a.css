@@ -1,0 +1,66 @@
+form 
+{
+    /* Center the content (the form in this case) to the page */
+    margin: 0 auto;
+    width: 400px; /*Set the width of the form to 400px */
+    
+    /* Adding a border around the form with a 1px solid line with defined color */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+
+form div + div 
+{
+    /* Adding space to the top of each form widget to seperate them */
+    margin-top: 1em;
+}
+
+label
+{
+    display: inline-block;
+    width: 90px;
+
+    /* Align all three labels to the right */
+    text-align: right;
+}
+
+input, textarea 
+{
+    /* Change the font from default one (monospace font) to sans-serif 
+    */
+    font: 1em sans-serif;
+
+    /* Change widht for all three form widgets to 300px*/
+    width: 300px;
+    box-sizing: border-box;
+
+    border: 1px solid #999;
+}
+
+/* Change the border color of every typing area to a defined color when
+   it is clicked */
+input:focus, textarea:focus 
+{
+    border-color: #000;
+}
+
+textarea 
+{
+    vertical-align: top;
+
+    /* Chang the height of element for "Message" to 5em */
+    height: 5em;
+}
+
+/* Change the left side's padding of the button to 90px */
+.button 
+{
+    padding-left: 90px;
+}
+
+/* Change the left side's margin of the button to 0.5em */
+button 
+{
+    margin-left: .5em;
+}
