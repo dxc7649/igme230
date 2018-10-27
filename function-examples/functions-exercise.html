@@ -34,12 +34,21 @@
         let colors = ["grey", "white", "black"]; // add some colors
         let foods = ["noodles", "rices", "pastas"]; // add some foods
 
-        for (let i = 0; i < colors.length; i++) 
+        function createList(listElement, array) 
         {
-                let favColor = colors[i];
-                let currentText = document.createTextNode(favColor);
-                document.querySelector('ol').appendChild(currentText);
+            for (let i = 0; i < array.length; i++) 
+            {
+                let favItem = array[i];
+                let currentText = document.createTextNode(favItem);
+                let newList = document.createElement("li")
+                newList.appendChild(currentText);
+                document.querySelector(listElement).appendChild(newList);
+            }
         }
+
+        createList('ol', colors);
+        createList('ol:nth-of-type(2)', foods);
+
     </script>
     
 </body>
