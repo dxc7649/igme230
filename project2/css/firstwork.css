@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    background-color: #f1f1f1;
+    font-family: 'Montserrat', sans-serif;
+}
+
+article {
+    padding: .5rem;
+}
+
+/* Grid Formatting  */
+#wrapper {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "header" "article" "sidebar";
+    grid-template-rows: 1fr 10fr 2fr;
+}
+
+header { 
+    grid-area: header;
+    max-width: 1000px;
+    margin: auto;
+
+    font-size: 20px;
+
+    /* Add a solid, black border to the bottom of "header" with 
+       width of 5px */
+    border-bottom: 5px solid black;
+    border-radius: 5px;
+}
+
+article {
+    grid-area: article;
+    max-width: 1000px;
+    
+    /* The space between each line will be 2 */
+    line-height: 2;
+}
+
+img {
+    max-width: 50%;
+}
+
+@media screen and (min-width: 760px) {
+    #wrapper {
+        max-width: 90%;
+        margin: 0 auto;
+
+        grid-template-areas: "header header header"
+        "sidenav article sidebar"
+        "footer footer footer";
+        grid-template-rows:  1fr 10fr 1fr;
+        grid-template-columns: 20% auto 20%;
+    }
+}
+
+/* The Following part of codes is the same thing to project.css, which
+   will create a drop-down menu for the viewer to navigate between 
+   different pages*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* For every h2 element under class name "dropdown", it will have
+   a 0.5rem padding on left and right sides, and a margin of 1em 
+   on the top. The text color will be black and the background color
+   of content will be light gray */
+.dropdown>h2 {
+    position: relative;
+    margin-top: 1em;
+    color: black;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: lightgray;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* For every "a" element under class name "dropdown-content", the text
+   color will be black, a padding of 12px for top and bottom, a padding 
+   of 16px for left and right. In addtion, remove the line under each 
+   link. */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* When the mouse is hover on "a" element under class "dropdown-content,
+   its background color will change to a pre-set color */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+

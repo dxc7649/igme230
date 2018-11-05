@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Make the color for whole background to be a pre-set 
+   color and have a padding of 20px on four sides. Text 
+   font inside this element will be "Montserrat" */
+body {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Center website */
+.main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 50px;
+    padding-bottom: 15px;
+    border-bottom: 5px solid black;
+    border-radius: 5px;
+}
+
+h1>img {
+    max-width: 14%;
+    border: 2px solid lightgray;
+}
+
+.row {
+    margin: 8px -16px;
+}
+
+/* Create three equal columns that floats next to each other 
+   with each width that is one third of the main's width */
+.column {
+    float: left;
+    width: 33.3%;
+}
+
+/* Stop apply "float" to the rest of elements after the element
+   "rows" */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Center every title of each project inside the circle */
+.content {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Responsive layout - makes a two column-layout instead of 
+   three columns */
+@media screen and (max-width: 900px) {
+    .column {
+        width: 70%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each 
+   other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 120%;
+    }
+}
+
+/* Seperate four icons with the same amount of space and every 
+   icon's color will be black */
+#icons {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    color: black;
+}
+
+/* Create a circle: I understand part of this code, but I am still
+   confused about some other codes */
+.circle {
+    display: inline-block;
+    padding-bottom: 100%;
+    width: 100%;
+    height: 0;
+    border-radius: 50%;
+    background-color: #ddd;
+}
+
+/* For every element "p" insdie class "circle", it will have a margin
+   of 0 on top and button, adn a margin of 2rem on left and right */
+.circle>p {
+    margin: 0 2rem;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* For every h3 element under class name "dropdown", it will have 
+   a 4.5em margin or the top and the color for the text insde 
+   will be black */
+.dropdown>h3 {
+    position: relative;
+    color: black;
+    margin-top: 4.5em;
+    
+}
+
+/* For every h2 element under class name "dropdown", it will have
+   a 0.5rem padding on four sides, */
+.dropdown>h2 {
+    position: relative;
+    color: black;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: .5rem;
+}
+
+/* For content insdie class "dropwdown-content", its display property 
+   will be "none", which means it will not show up initially, and the 
+   background color of the content will be light gray. In addtion, when
+   the content shows up, it will be on top of any other elements and 
+   cover other elements */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: lightgray;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* For every "a" element under class name "dropdown-content", the text
+   color will be black, a padding of 12px for top and bottom, a padding 
+   of 16px for left and right. In addtion, remove the line under each 
+   link. */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* When the mouse is hover on "a" element under class "dropdown-content,
+   its background color will change to a pre-set color */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* When the mouse is hover on a class "dropdown", it will change the display
+   property of class "dropdown-content" from "none" to "block", which makes
+   it appaer */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
