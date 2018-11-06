@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Grid Examples</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        .mygrid {
+            display: grid;
+
+            /* The height of whole content will be 100% of window */
+            height: 100vh;
+
+            /* "Auto" is depend on the content inside the grid */
+            /* grid-template-columns: 150px auto auto; */
+            
+            /* "Fr" is depend on the existing space */
+
+            /* Divided three colummns with the first one's width beign 150px and the rest two columns have equal spaces*/
+            grid-template-columns: 150px 1fr 1fr;
+            /* Divdied four rows with first row of 100px, middle two with equal spaces and 50px for the last row */
+            grid-template-rows: 100px 1fr 1fr 50px;  
+        }
+
+        .mygrid div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: lightgray;
+            border: .5px solid black;
+        }
+
+        .titlebar {
+            grid-column-start: 1;
+
+            /* "-1" means the last one */
+            grid-column-end: -1;
+
+            /* Span three columns from start */
+            grid-column-end: span 3;  
+
+            /* Short way to write above code */
+            grid-column: 1 / span 3;
+        }
+
+        .sidebar {
+            /* Same concept can applyed from above */
+            grid-row: 2 / span 2;
+        }
+
+        .footer {
+            /* Same concept can applyed from above */
+            grid-column: 1 / span 3
+        }
+
+    </style>
+
+</head>
+
+<body>
+    
+    <div class="mygrid">
+        <div class="titlebar">Cell 1</div>
+        <div class="sidebar">Cell 2</div>
+        <div>Cell 3</div>
+        <div>Cell 4</div>
+        <div>Cell 5</div>
+        <div>Cell 6</div>
+        <div class="footer">Cell 7</div>
+
+        <!-- Actual number of cell that is required will be 7
+        <div>Cell 8</div>
+        <div>Cell 9</div>
+        <div>Cell 10</div>
+        <div>Cell 11</div>
+        <div>Cell 12</div>
+        -->
+    </div>
+
+</body>
+</html>
