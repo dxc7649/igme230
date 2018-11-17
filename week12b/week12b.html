@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Week12 Interactivity Exercise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jquery.slidereveal.min.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .mygrid {
+            display: grid;
+
+            /* The height of whole content will be 100% of window */
+            height: 100vh;
+
+            /* "Auto" is depend on the content inside the grid */
+            /* grid-template-columns: 150px auto auto; */
+
+            /* "Fr" is depend on the existing space */
+
+            /* Divided three colummns with the first one's width beign 150px and the rest two columns have equal spaces*/
+            grid-template-columns: 150px 1fr 1fr;
+            /* Divdied four rows with first row of 100px, middle two with equal spaces and 50px for the last row */
+            grid-template-rows: 100px 1fr 1fr 50px;
+        }
+
+        .mygrid div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: white;
+            border: .5px solid black;
+        }
+
+        .titlebar {
+            grid-column-start: 1;
+
+            /* "-1" means the last one */
+            grid-column-end: -1;
+
+            /* Span three columns from start */
+            grid-column-end: span 3;
+
+            /* Short way to write above code */
+            grid-column: 1 / span 3;
+        }
+
+        .sidebar {
+            /* Same concept can applyed from above */
+            grid-row: 2 / span 2;
+
+        }
+
+        .footer {
+            /* Same concept can applyed from above */
+            grid-column: 1 / span 3
+        }
+
+        /* Code for Week12 Interactivity Exercise */
+
+        /* Top-down navigation menu */
+        #navigation {
+            display: grid;
+
+            /* Adding border and a shadow to the navigation menu */
+            border: 2px solid black;
+            border-radius: 15px;
+            background-color: white;
+            box-shadow: 10px 10px lightgray;
+
+            /* Arranging text inside the navigation menu */
+            padding: 10px;
+            text-align: left;
+
+            position: fixed;
+            top: -150px;
+            z-index: 2;
+
+            min-width: 150px;
+            max-width: 150px;
+        }
+
+        #hidemenu {
+            display: none;
+        }
+
+        #showmenu,
+        #hidemenu {
+            padding-top: 5px;
+            text-align: center;
+        }
+
+        /* Right-left navigation menu */
+        #rightnav {
+            display: grid;
+            grid-template-columns: 100px 150px 150px 150px;
+            grid-template-rows: 40px;
+
+            /* Adding border and a shadow to the navigation menu */
+            border: 2px solid black;
+            background-color: white;
+            box-shadow: 5px 10px lightgray;
+
+            text-align: left;
+
+            position: fixed;
+            right: -500px;
+            z-index: 2;
+        }
+
+        #lefthide {
+            display: none;
+        }
+
+        #leftshow,
+        #lefthide {
+            padding-top: 10px;
+            padding-left: 10px;
+            text-align: left;
+
+            font-size: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navigation">
+        <p> &#45; First Link</p>
+        <p> &#45; Second Link</p>
+        <p> &#45; Third Link</p>
+        <span id="showmenu">
+            Show Navigation
+        </span>
+        <span id="hidemenu">
+            Hide Navigation
+        </span>
+    </div>
+
+    <div id="rightnav">
+        <span id="leftshow">
+            Show
+        </span>
+        <span id="lefthide">
+            Hide
+        </span>
+        <p> &#45; First Link</p>
+        <p> &#45; Second Link</p>
+        <p> &#45; Third Link</p>
+    </div>
+
+    <div class="mygrid">
+        <div class="titlebar">Cell 1</div>
+        <div class="sidebar">Cell 2</div>
+        <div>Cell 3</div>
+        <div>Cell 4</div>
+        <div>Cell 5</div>
+        <div>Cell 6</div>
+        <div class="footer" id="buttonnav">Cell 7</div>
+
+        <!-- Actual number of cell that is required will be 7
+                <div>Cell 8</div>
+                <div>Cell 9</div>
+                <div>Cell 10</div>
+                <div>Cell 11</div>
+                <div>Cell 12</div>
+        -->
+    </div>
+
+    <script>
+        $("#showmenu").click(function () {
+            $("#navigation").animate({
+                top: '0px'
+            }, "slow");
+
+            $("#showmenu").toggle();
+            $("#hidemenu").toggle();
+        });
+
+        $("#hidemenu").click(function () {
+            $("#navigation").animate({
+                top: '-150px'
+            }, "slow");
+
+            $("#showmenu").toggle();
+            $("#hidemenu").toggle();
+        });
+
+        $("#leftshow").click(function () {
+            $("#rightnav").animate({
+                right: '7px'
+            }, "slow");
+
+            $("#leftshow").toggle();
+            $("#lefthide").toggle();
+        });
+
+        $("#lefthide").click(function () {
+            $("#rightnav").animate({
+                right: '-500px'
+            }, "slow");
+
+            $("#leftshow").toggle();
+            $("#lefthide").toggle();
+        });
+    </script>
+</body>
+
+</html>
