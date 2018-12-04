@@ -1,0 +1,37 @@
+<p id="verse1">Mad has decided to catch a vulture,<br>
+the biggest bird she can find.<br></p>
+ 
+<p id="verse2">She is so determined, and so inventive,<br>
+that by stringing together a rickety trap<br>
+of ropes and sticks, she creates<br>
+a puzzling structure that just might<br>
+be clever enough to trick a buzzard,<br>
+once the trap’s baited with leftover pork<br>
+from supper.</p>
+ 
+<p id="verse3">Mad and I used to do everything together,<br>
+but now I need a project all my own,<br>
+so I roam the green fields,<br>
+finding bones.</p>
+ 
+<p id="verse4">The skull of a wild boar.<br>
+The jawbone of a mule.</p>
+ 
+<p id="verse5">Older cousins show me<br>
+how to shake the mule’s quijada,<br>
+to make the blunt teeth<br>
+rattle.</p>
+ 
+<p id="verse6">Guitars.<br>
+Drums.<br>
+Gourds.<br>
+Sticks.</p>
+ 
+<p id="verse7">A cow bell.<br>
+A washboard.<br>
+Pretty soon, we have<br>
+a whole orchestra.</p>
+ 
+<p id="verse8>"On Cuban farms, even death<br>
+can turn into<br>
+music.</p>
