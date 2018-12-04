@@ -1,8 +1,13 @@
 /* Don't use <script> tags in a linked js file! */
-$(".menubox:first").click(function() {
-    $(".submenu:first").slideToggle("slow");
+$(".menuitem").click(function() {
+    $(this).next().slideToggle("slow");
 })
 
-$(".menubox: nth-child(2)").click(function() {
-    $(".submenu:second").slideToggle("slow");
-})
+let showcontent = ("content1.txt")
+$("#choose-content").val(showcontent);
+$("#content").load(showcontent);
+
+$("choose-content").change(function (){
+    showcontent = $(this).val();
+    $("#content").load(showcontent);
+});
