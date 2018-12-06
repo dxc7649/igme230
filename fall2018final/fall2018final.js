@@ -3,13 +3,14 @@ $(".top").click(function() {
 })
 
 let showcontent = ("article0.txt")
-
 $("article").load(showcontent);
 
-$("[article1.txt]").checked(function (){
-    showcontent = ("article1.txt")
+$("input[name=story][value='article1.txt']").click(function () {
+    showcontent = ("article1.txt");
+    $("article").load(showcontent);
 })
 
-$("input:contains('Article 2')").click(function (){
-    showcontent = ("article2.txt")
+$("input[name=story][value='article2.txt']").click(function () {
+    showcontent = ("article2.txt");
+    $("article").load(showcontent);
 })
