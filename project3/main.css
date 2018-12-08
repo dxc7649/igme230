@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+#mygrid {
+    display: grid;
+    height: 100vh;
+    width: 100vh;
+
+    grid-template-areas: 
+    "header header header"
+    "first second third"
+    "footer footer footer"
+}

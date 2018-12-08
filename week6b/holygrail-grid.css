@@ -41,7 +41,7 @@ Grid Formatting
     display: grid;
     height: 100vh;
     grid-template-areas: "header" "sidenav" "article" "sidebar" "footer";
-    grid-template-rows: 1fr 2fr 10fr 2fr 1fr;
+    grid-template-rows: 1fr 3fr 10fr 2fr 1fr;
 }
 
 header {
