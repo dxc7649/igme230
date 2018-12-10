@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Make the color for whole background to be a pre-set 
+   color. Font style for the tex that is inside this element 
+   will be "Montserrat" */
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f1f1f1;
+}
+
+/* A grid layout with three columns and three rows. For rows, the first
+   row will be 11rem, third row will be 3rem, and the second row will take 
+   up the remaining space. For columns, each column will take up same spaces.
+   The minimum height for the page is 80 percent fo viewport high, and width 
+   will be 90 percent  of viewport width.*/
+
+#mygrid {
+    display: grid;
+
+    min-height: 80vh;
+
+    width: 90vw;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    grid-template-areas:
+        "header header header"
+        "first second third"
+        "footer footer footer";
+
+    grid-template-rows: 11rem 1fr 3rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem
+}
+
+/* Following is the different section inside the grid layout */
+header {
+    margin: 0;
+    padding: 0;
+
+    grid-area: header;
+}
+
+projectone {
+    grid-area: first;
+
+    display: flex;
+    align-items: center;
+}
+
+projecttwo {
+    grid-area: second;
+
+    display: flex;
+    align-items: center;
+}
+
+projectthree {
+    grid-area: third;
+
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    grid-area: footer;
+
+    text-align: center;
+    align-items: center;
+}
+
+/* For four icons at the bottom of the page, each of them will take up same 
+   space in horizontal order */
+#icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    align-items: center;
+}
+
+
+/* Create a background for the brief description of three project, and the color 
+   of background will be a pre-set color. The maximunm width of this background
+   will be 20rem and minimum height will be 16rem. In addition, a 11rem for the
+   top margin and 5rem for the bottom margin. */
+.circle {
+    max-width: 20rem;
+    min-height: 16rem;
+
+    margin-top: 11rem;
+    margin-bottom: 5rem;
+
+    padding-left: 14px;
+    padding-right: 14px;
+
+    /* For the text inside this "box", the spacing between each lien will be 1.9 */
+    line-height: 1.9;
+
+    border-radius: 20px;
+
+    background-color: #ddd;
+
+    box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 50px;
+    border-bottom: 5px double #737373;
+
+    color: #4d4d4d;
+}
+
+img {
+    max-width: 14%;
+    border: 2px solid lightgray;
+
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+a {
+    color: black;
+}
+
+.documentation {
+    text-align: center;
+
+    width: 220px;
+    background-color: #d9d9d9;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+
+    box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+/* The grid layout for the mobile design. This design will contains one single column 
+   with five rows. In addition, the personal picture will be hiden. */
+@media screen and (max-width: 460px) {
+    #mygrid {
+        width: 70%;
+
+        grid-template-areas:
+            "header"
+            "first"
+            "second"
+            "third"
+            "footer";
+
+        grid-template-columns: 320px;
+        grid-template-rows: 20px 500px 100px 1fr 1fr;
+    }
+
+    img {
+        display: none;
+    }
+
+
+    #icons {
+        display: grid;
+        grid-template-columns: 290px;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+
+        align-items: center;
+    }
+}

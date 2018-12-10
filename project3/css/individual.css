@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f1f1f1;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+aside,
+article {
+    padding: .5rem;
+}
+
+
+/* Each individual page will have two columns and three rows. In addition, 
+   the maximum width will be 1200px and the minimum height will be 80 percent
+   of viewport hight. */
+#wrapper {
+    display: grid;
+
+    margin: 0 auto;
+
+    width: 100vw;
+    max-width: 1200px;
+
+    min-height: 80vh;
+
+    grid-template-areas:
+        "header header"
+        "sidebar picture"
+        "footer footer";
+    grid-template-rows: 11rem 1fr 3rem;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+header {
+    grid-area: header;
+    margin: 0;
+    padding: 0;
+
+    padding-top: 90px;
+
+    border-bottom: 4px double grey;
+}
+
+aside {
+    grid-area: sidebar;
+
+    padding-top: 70px;
+    line-height: 2.2;
+}
+
+picture {
+    grid-area: picture;
+
+    padding-top: 50px;
+    padding-left: 60px;
+}
+
+img {
+    max-width: 80%;
+}
+
+/* Following codes will be for the dropdown menu from the title, and it will hidden
+   when the page is load and only trigger wiht the jQuery codes. */
+#dropdown-menu {
+    display: none;
+}
+
+.dropdown-content {
+    margin-top: 7px;
+
+    text-align: center;
+
+    width: 220px;
+    background-color: #d9d9d9;
+   
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+
+    box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a { 
+    color: #404040;
+    text-decoration: none;
+}
+
+h1 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* The grid layout design for the mobile. This will contain a singel column and four
+   rows. In addition, the header's font size will be 70% of its original font size. */
+@media screen and (max-width: 460px) {
+    #wrapper {
+        width: 100vw;
+        
+        grid-template-areas: 
+        "header" 
+        "sidebar"
+        "picture"
+        "footer";   
+        
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+    }
+
+    header {
+        font-size: 70%;
+    }
+
+    aside {
+        padding: 0;
+    }
+}
